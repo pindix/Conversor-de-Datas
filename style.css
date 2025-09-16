@@ -19,7 +19,7 @@
 .div2 {
     border: none; border-radius: 10px;
     border-bottom: solid 4px lightblue;
-    padding: 1rem; font-size: 0.8rem;
+    padding: 1rem; font-size: 1.2rem;
     background: linear-gradient(rgba(0, 0, 0, 0.801), rgba(173, 216, 230, 0.253));
 }
 
@@ -49,7 +49,7 @@ button {
     transform: translateX(-50%);
     display: flex; color: lightblue; 
     background: linear-gradient(lightblue, black);
-    transition: 0.5s; font-size: 1.3rem;
+    transition: 0.5s; font-size: 1.1rem;
     border-bottom: 2px white solid;
 }
 button:hover {
