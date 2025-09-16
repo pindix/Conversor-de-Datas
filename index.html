@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Data 📆</title>
+    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <section id="section">
+        <p id="info" onclick="abrir_menu()"> <i class="ri-file-info-line"></i> IMPORTANTE</p>
+        <div id="menu">
+            <i class="ri-close-circle-fill" onclick="fechar_menu()"></i> <br> <br> <br>
+            <p>A hora e a data da reunião são convertidas apenas para a hora e data de Minas Gerais, Brasil. <br>
+            Esse conversor é um presente para a minha querida amiga Eliz.</p>
+        </div>
+        <div class="div1">
+            <h3>Conversor de <span class="dataCor">Data</span> </h3>
+            <div class="div2">
+                <label for="dataHora">Selecione a data da reunião</label> <br>
+                <input type="datetime-local" id="dataHora" placeholder="Hora.."> <br> <br>
+
+                <label for="fuso">Selecione o fuso da reunião</label> <br>
+                <select id="fuso">
+                    <option value="2">UTC+5</option>
+                    <option value="3">UTC+6</option>
+                    <option value="4">UTC+7</option>
+                    <option value="5">UTC+8</option>
+                    <option value="6">UTC+9</option>
+                    <option value="7">UTC+10</option>
+
+                </select> <br> <br>
+                <button onclick="converter()"> <i class="ri-arrow-left-right-fill"></i> Converter</button>
+            </div> 
+            <br>
+            <br>
+            <br>
+            <p id="resultado">.</p>
+        </div>
+    </section>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
