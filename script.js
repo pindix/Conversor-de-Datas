@@ -26,13 +26,13 @@ function converter() {
   const diaSemana = diasSemana[data.getDay()];
 
   // Formatar para exibir (YYYY-MM-DD HH:mm)
-  const formatado = data.getFullYear() + "-" +
+  const formatado = String(data.getDate()).padStart(2,"0") + "-" +
                     String(data.getMonth()+1).padStart(2,"0") + "-" +
-                    String(data.getDate()).padStart(2,"0") + " " +
+                    data.getFullYear() + " " +"às "+
                     String(data.getHours()).padStart(2,"0") + ":" +
                     String(data.getMinutes()).padStart(2,"0");
 
-  resultado.innerHTML = `<strong>A reunião vai acontecer <em>${diaSemana}</em> de ${formatado}</strong>.<br>‼️ Data da reunião convertida para a data de Minas Gerais, Brasil.`;
+  resultado.innerHTML = `<strong>A reunião vai acontecer <em>${diaSemana}</em> no dia <br> ${formatado}</strong>.<br>‼️ Data da reunião convertida para a data de Minas Gerais, Brasil.`;
 }
 
 
