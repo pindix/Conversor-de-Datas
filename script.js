@@ -1,3 +1,5 @@
+// CONVERTER A HORA
+
 function converter() {
   const input = document.getElementById("dataHora").value;
   const fuso = parseInt(document.getElementById("fuso").value);
@@ -30,18 +32,22 @@ function converter() {
                     String(data.getHours()).padStart(2,"0") + ":" +
                     String(data.getMinutes()).padStart(2,"0");
 
-  resultado.innerHTML = `<strong>A reunião vai acontecer <em>${diaSemana}</em> de ${formatado}</strong><br>‼️ Data da reunião convertida para a data de Minas Gerais, Brasil.`;
+  resultado.innerHTML = `<strong>A reunião vai acontecer <em>${diaSemana}</em> de ${formatado}</strong>.<br>‼️ Data da reunião convertida para a data de Minas Gerais, Brasil.`;
 }
+
+
+// ABRIR E FECHAR MENU 
+
 
 const menu = document.getElementById("menu");
 const tela = document.getElementById("section");
 function abrir_menu(){
     menu.style.left = "0";
-    tela.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.92)), url(clock.jpeg)";
+    tela.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.92)), url(clock.jpg)";
 }
 function fechar_menu(){
-    menu.style.left = "-70.2%";
-    tela.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.767)), url(clock.jpeg)";
+    menu.style.left = "-70%";
+    tela.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.767)), url(clock.jpg)";
 }
 
 

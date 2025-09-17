@@ -6,14 +6,14 @@
 #section {
     color: white;
     min-height: 100vh; width: 100%; position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.767)), url(clock.jpeg); 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.767)), url(clock.jpg); 
     background-position: center; background-size: cover;
     transition: 1s;
 }
 .div1 {
     background: transparent; width: 22rem; 
     border-radius: 10px; position: absolute;
-    left: 50%; top: 50%; transform: translate(-50%, -50%);
+    left: 50%; top: 40%; transform: translate(-50%, -50%);
     border: none; 
 }
 .div2 {
@@ -43,8 +43,8 @@ select:hover {
     height: 2rem;
 }
 button {
-    border: none; padding: 0.6rem; border-radius: 8px; 
-    position:absolute; left: 50%; bottom: ; 
+    border: none; padding: 0.6rem; border-radius: 20px; 
+    position:absolute; left: 50%;
     align-items: center;
     transform: translateX(-50%);
     display: flex; color: lightblue; 
@@ -69,7 +69,8 @@ p {
     height: 100vh; background: rgba(8, 71, 92, 0.959);
     box-shadow: 0 0 2px white;
     z-index: 10; padding: 1rem;
-    left: -70.2%; top: 0; transition: 1s;
+    left: -70%; top: 0; transition: 1s;
+    border-radius: 0 30px 0 0;
 }
 #menu i {
     font-size: 2rem; color: white;
@@ -78,7 +79,7 @@ p {
     font-size: 1.1rem;
 }
 #info {
-    position: absolute; top: 2rem; left: 20%;
+    position: absolute; bottom: 2rem; left: 50%;
     transform: translate(-50%, -50%); width: fit-content;
     border-radius: 10px; padding: 0.5rem; 
     transition: 0.5s; font-size: 1rem;
@@ -98,6 +99,11 @@ p {
     .div1 {
         width: 19rem;
     }
+}
+
+
+@media (max-height: 400px){
+    #section {min-height: 500px;}
 }
 
 

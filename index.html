@@ -9,12 +9,16 @@
       <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
-    <section id="section">
+    <section id="section" >
         <p id="info" onclick="abrir_menu()"> <i class="ri-file-info-line"></i> IMPORTANTE</p>
         <div id="menu">
             <i class="ri-close-circle-fill" onclick="fechar_menu()"></i> <br> <br> <br>
             <p>A hora e a data da reunião são convertidas apenas para a hora e data de Minas Gerais, Brasil. <br>
-            Esse conversor é um presente para a minha querida amiga Eliz.</p>
+            Esse conversor é um presente para a minha querida amiga Eliz.</p><br> <hr>  <br> 
+            <p> <strong>INSTRUÇÃO DE USO</strong> <br> <br>
+                É muito simples usar o conversor, em data da reunião deve colocar a data do país em que a reunião começa.<br>
+                Em fuso, deve colocar o fuso horário do país em que a reunião começa. Podes encontrar tanto a data como o fuso horário no grupo do Facebook.
+            </p>
         </div>
         <div class="div1">
             <h3>Conversor de <span class="dataCor">Data</span> </h3>
@@ -24,20 +28,19 @@
 
                 <label for="fuso">Selecione o fuso da reunião</label> <br>
                 <select id="fuso">
-                    <option value="2">UTC+5</option>
-                    <option value="3">UTC+6</option>
-                    <option value="4">UTC+7</option>
-                    <option value="5">UTC+8</option>
-                    <option value="6">UTC+9</option>
-                    <option value="7">UTC+10</option>
-
+                    <option value="2">UTC+5 EUA</option>
+                    <option value="3">UTC+6 EUA</option>
+                    <option value="4">UTC+7 EUA</option>
+                    <option value="5">UTC+8 EUA</option>
+                    <option value="6">UTC+9 EUA</option>
+                    <option value="7">UTC+10 EUA</option>
                 </select> <br> <br>
                 <button onclick="converter()"> <i class="ri-arrow-left-right-fill"></i> Converter</button>
             </div> 
             <br>
             <br>
             <br>
-            <p id="resultado">.</p>
+            <p id="resultado"></p>
         </div>
     </section>
 
