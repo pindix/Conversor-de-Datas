@@ -1,113 +1,334 @@
 * {
-    padding: 0; font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box; outline: none;
-    margin: 0; font-family: "Poppins";
+    margin: 0; padding: 0; box-sizing: border-box;
+    text-decoration: none; font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
-#section {
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* 🔥 corta qualquer coisa que “vaze” pro lado */
+}
+html {
+  scroll-behavior: smooth;
+}
+ 
+
+
+/*:::: INÍCIO :::::*/
+#inicio {
+    width: 100%; min-height: 100vh;
+    position: relative;
+    background: radial-gradient(circle at top right, #003366, #001a33 70%);
+    transition: filter 0.6s ease, opacity 0.6s ease;
+    filter: blur(0) brightness(1);
+}
+
+.desfocar {
+  filter: blur(6px) brightness(0.5);
+}
+.inicio_div {
+    top: 50%; left: 50%; 
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 40rem;
+    height: 50rem;
+}
+
+
+#bg-video {
+    height: 20rem; position: absolute;
+    bottom: 0; right: 0;
+z-index: -2; border-radius: 8px;
+    background: white;
+    border-radius: 100%;
+    width: 20rem; 
+}
+
+
+.pop_up {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.823); 
+    z-index: 50;
+    border-radius: 20px;
+    opacity: 0;
+    width: 30rem;
+    padding: 0.8rem;
+    box-shadow: 0 0 0.5rem white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.7s ease;
+  font-size: 30px;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pop-up {
+    position: relative;
+}
+.pop_up i {
+    position: absolute;
+    top:4px; right:8px;
+    color: #003366;
+    font-size: 1.5rem;
+    
+}
+.pop_up p {color: #003366; padding-top: 10px; }
+.pop_up a{
+    width: 100%;
+    border: solid 2px #003366; color: white;
+    padding: 0.5rem; border-radius: 20px; 
+    transition: 0.5s; display: block;
+    text-align: center; color: #003366;
+}
+#inicio h3 {
+    color: lightblue; font-size: 100px;
+    font-weight: 900;
+line-height: 3rem;
+}
+#inicio span {
     color: white;
-    min-height: 100vh; width: 100%; position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.767)), url(clock.jpg); 
-    background-position: center; background-size: cover;
-    transition: 1s;
+font-size: 50px; letter-spacing: 13px;
 }
-.div1 {
-    background: transparent; width: 22rem; 
-    border-radius: 10px; position: absolute;
-    left: 50%; top: 40%; transform: translate(-50%, -50%);
-    border: none; 
+.inicio_div p {
+    color: white; margin-top: 3rem;
+    font-size: 30px; margin-bottom: 2rem;
 }
-.div2 {
-    border: none; border-radius: 10px;
-    border-bottom: solid 4px lightblue;
-    padding: 1rem; font-size: 1.2rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.801), rgba(173, 216, 230, 0.253));
+.reta {
+    border: solid 2px lightblue; color: white;
+    padding: 1rem; border-radius: 40px; 
+    transition: 0.5s; font-size: 30px;
+} 
+.bolha {
+    border: solid 2px lightblue; color: white;
+    padding: 1rem; border-radius: 50px; transition: 0.5s;
+    font-size: 30px;
 }
-
-h3 {
-    margin: 0 0 1rem; color: lightblue;
-    padding: 0 0.3rem; font-size: 1.7rem;
-}
-
-input {
-    border: none; border-radius: 10px; padding: 0.3rem;
-    height: 1.7rem; transition: 0.5s; width: 9rem;
-}
-input:hover {
-    height: 2rem;
-}
-select {
-    padding: 0.3rem; border: none; border-radius: 10px;
-    height: 1.7rem; transition: 0.5s; width: 6rem;
-}
-select:hover {
-    height: 2rem;
-}
-button {
-    border: none; padding: 0.6rem; border-radius: 20px; 
-    position:absolute; left: 50%;
-    align-items: center;
-    transform: translateX(-50%);
-    display: flex; color: lightblue; 
-    background: linear-gradient(lightblue, black);
-    transition: 0.5s; font-size: 1.1rem;
-    border-bottom: 2px white solid;
-}
-button:hover {
+a:hover {
+    background: lightblue; color: darkblue;
     letter-spacing: 2px;
 }
-i {
-    color: lightblue; font-size: 1rem;
-}
-p {
-    padding: 0 0.5rem; font-size: 1.1rem;
+.bolinhas {
+    background: white; border-radius: 100%;
+    width: 3rem; height: 3rem; position: absolute;
+    bottom: 16rem; left: 18rem;
 }
 
+/*:::: SOBRE :::::*/
+#sobre {
+    width: 100%;
+    position: relative; height: fit-content;
+    background: linear-gradient(180deg, #001a33, #000f26);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+#div_sobre {
+    margin: auto;
+    width: 45rem;
+    border-radius: 40px;
+    padding: 2.5rem;
+    background: radial-gradient(circle at top left, rgba(173, 216, 230, 0.15), rgba(0, 15, 38, 0.7));
+border: 1px solid rgba(255, 255, 255, 0.1);
+box-shadow: 0 0 0.5rem white;
+}
+#sobre h3 {
+    color: lightblue; font-size: 60px; margin-bottom: 1rem;
+    font-weight: 900
+}
+.sobre_p {
+    color: white; font-size: 40px;
+}
 
+#campo {
+    width: fit-content; position: relative;
+    font-size: 40px;
+}
+#pag {
+    background: none; 
+    border: solid 2px white; border-radius: 20px;
+    padding: 0.5rem 2rem 0.5rem 0.5rem; 
+    outline: none; 
+    color: white; 
+    transition: 0.3s;
+    font-size: 40px;
+    width: 20rem;
+} #pag::placeholder{ color: lightblue;}
 
-#menu {
-    width: 70%; position: absolute;
-    height: 100vh; background: rgba(8, 71, 92, 0.959);
-    box-shadow: 0 0 2px white;
-    z-index: 10; padding: 1rem;
-    left: -70%; top: 0; transition: 1s;
-    border-radius: 0 30px 0 0;
+#pag:hover {
+    border: none;
+    border-bottom: solid 2px white;
+    border-radius: 0; padding: 0.5rem 2.5rem 0.5rem 0;
 }
-#menu i {
-    font-size: 2rem; color: white;
-}
-#menu p {
-    font-size: 1.1rem;
-}
-#info {
-    position: absolute; bottom: 2rem; left: 50%;
-    transform: translate(-50%, -50%); width: fit-content;
-    border-radius: 10px; padding: 0.5rem; 
-    transition: 0.5s; font-size: 1rem;
-    background: rgb(8, 71, 92);
-}
-#info:hover {
-    background: rgba(8, 71, 92, 0.356);
-}
-.dataCor {
+#campo p {
+    height: 80%; display: flex;
+    align-items: center; position: absolute;
+    bottom: 0; right: 6px; 
     color: white;
+
+}
+#preco {
+    margin-top: 1rem;
+    padding: 0.5rem; background: lightblue;
+    border-radius: 20px; width: fit-content;
+    color: dark; font-size: 40px;
+}
+
+
+/*:::: NOTA :::::*/
+#nota {
+    width: 100%;
+    position: relative; height: fit-content;
+    background: linear-gradient(180deg, #000f26, #000814);
+    padding-bottom: 8rem;
+    padding-top: 6rem;
+}
+#nota div {
+    margin: auto; width: 45rem;
+    padding: 2.5rem; border: solid 2px white;
+    border-radius: 40px;
+}
+#nota h3 {
+    color: lightblue; font-size: 35px;
+    margin-bottom: 1rem; font-weight: 900;
+    font-size: 60px;
+}
+#nota p {
+    color: white; font-size: 40px;
+    padding-bottom: 2rem;
+}
+
+/*:::: DADOS :::::*/
+#dados {
+    background: #000814;
+    width: 100%;
+    padding-bottom: 2rem;
+    
+}
+#dados_div {
+    margin: auto;
+    width: fit-content;
+    color: white;
+    display: flex;
+    align-items: center; justify-content: space-between;
+    font-size: 20px;
+}
+.info {
+    margin-right: 2rem;
+}
+.info :last-child {
+    display: flex;  flex-direction: column;
+}
+i {
+    color: lightblue;
+}
+
+.logo {
+    font-weight: 900;
+}
+
+.info a {
+    color: lightblue;
+}
+.info a:hover {
+    color: white;
+    background: none;
 }
 
 
 
 
-@media (max-width:700px){
-    .div1 {
-        width: 19rem;
+.quebra { display: block;}
+
+
+@media (width < 50rem) {
+    #nota div, .inicio_div, #div_sobre{
+        width: 90%;
+    }
+    .inicio_div {
+        height: 30rem;
+        top: 50%;
+    }
+    .inicio_div p {
+        font-size: 16px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    #inicio h3 {
+        font-size: 90px;
+    }
+    #inicio span {
+        letter-spacing: 7px;
+    }
+    
+    .reta {
+        font-size: 16px;
+        padding: 0.5rem;
+    }
+    .bolha {
+        font-size: 16px;
+        padding: 0.5rem;
+    }
+    
+
+
+
+    #div_sobre {
+        padding: 1rem; 
+    }
+    #sobre h3 {
+        font-size: 36px;
+    }
+    #sobre p, #pag {
+        font-size: 16px;
+    }
+    #pag {
+        width: 10rem;
+    }
+
+
+    #nota div {
+        padding: 1rem;
+        padding-bottom: 2rem;
+    }
+    #nota p {
+        font-size: 16px;
+    }
+    #nota h3 {
+        font-size: 36px;
+    }
+    
+    .pop_up {
+        width: 20rem;
+        font-size: 16px;
+    }
+
+    
+    #dados_div {
+        font-size: 15px;
+    }
+
+    .quebra { display: none;}
+
+    #bg-video{
+        height: 10rem;
+        border-radius: 100%;
+        width: 12rem;
+        height: 12rem
+    }
+
+    .bolinhas {
+    width: 3rem; height: 3rem;
+    bottom: 9rem; left: 8rem;
     }
 }
 
 
-@media (max-height: 400px){
-    #section {min-height: 500px;}
+@media (height < 710px){
+    #inicio {
+        min-height: 710px;
+    }
 }
-
-
-
-
-
 

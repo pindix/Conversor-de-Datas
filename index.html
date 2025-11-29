@@ -1,86 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EL4NK9TEFJ"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VNRZ08HY9H"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-EL4NK9TEFJ');
+  gtag('config', 'G-VNRZ08HY9H');
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de Data 📆</title>
+    <title>Saúde e Papéis</title>
     <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ 
 </head>
 <body>
-    <section id="section" >
-        <p id="info" onclick="abrir_menu()"> <i class="ri-file-info-line"></i> IMPORTANTE</p>
-        <div id="menu">
-            <i class="ri-close-circle-fill" onclick="fechar_menu()"></i> <br> <br> <br>
-            <p>A hora e a data da reunião são convertidas apenas para a hora e data de Minas Gerais, Brasil. <br>
-            Esse conversor é um presente para a minha querida amiga Eliz.</p>
-<br> <hr>  <br> 
-            <p> <strong>INSTRUÇÃO DE USO</strong> <br> <br>
-                É muito simples usar o conversor. <br> Em data da reunião deve colocar a data do país em que a reunião começa.<br>
-                Em fuso, deve colocar o fuso horário do país em que a reunião começa. Podes encontrar tanto a data como o fuso horário no grupo do Facebook.
-            </p>
+ 
+    <!-- INÍCIO -->
+    <section id="inicio">
+        <div class="inicio_div" id="foco">
+            <h3 data-aos="fade-right" id="tema">Saúde <br> <span>e Papéis</span> </h3> 
+            
+            <p data-aos="fade-top" id="texto">Espaço criado para apoiar estudantes de Saúde com a edição, organização e formatação de trabalhos académicos. </p>
+            <br> 
+            <a  data-aos="fade-top" class="bolha" href="#sobre" id="a_sobre">Mais</a> 
+            <a id="a_solicitar" onclick="solicitar()" data-aos="fade-right" class="reta" href="#">Solicitar Trabalho <i class="ri-whatsapp-line"></i> </a>
+            <video autoplay muted loop playsinline id="bg-video">
+              <source src="video.mp4" type="video/mp4">
+              O teu navegador não suporta vídeos em HTML5.
+            </video>
+            <h5 class="bolinhas"></h5>
         </div>
-        <div class="div1">
-            <h3>Conversor de <span class="dataCor">Data</span> </h3>
-            <div class="div2">
-                <label for="dataHora">Selecione a data da reunião</label> <br>
-                <input type="datetime-local" id="dataHora" placeholder="Hora.."> <br> <br>
 
-                <label for="fuso">Selecione o fuso do país</label> <br>
-                <select id="fuso">
-                    
-                    <option value="3">UTC +- 0 </option>
-                   
-                    <option value="4">UTC+1 </option>
-                    <option value="5">UTC+2 </option>
-                    <option value="6">UTC+3</option>
-                    <option value="7">UTC+4</option>
-                    <option value="8">UTC+5</option>
-                    <option value="9">UTC+6 </option>
-                    <option value="10">UTC+7 </option>
-                    <option value="11">UTC+8 </option>
-                    <option value="12">UTC+9</option>
-                    <option value="13">UTC+10</option>
-                    <option value="14">UTC+11</option>
-                    <option value="15">UTC+12 </option>
-                    
-                    <option value="2">UTC-1 </option>
-                    <option value="1">UTC-2 </option>
-                    <option value="0">UTC-3</option>
-                    <option value="-1">UTC-4</option>
-                    <option value="-2">UTC-5</option>
-                    <option value="-3">UTC-6 </option>
-                    <option value="-4">UTC-7 </option>
-                    <option value="-5">UTC-8 </option>
-                    <option value="-6">UTC-9</option>
-                    <option value="-7">UTC-10</option>
-                    <option value="-8">UTC-11</option>
-                    <option value="-9">UTC-12 </option>
-                    
-                </select> <br> <br>
-                <button onclick="converter()"> <i class="ri-arrow-left-right-fill"></i> Converter</button>
-            </div> 
+        <!-- POP-UP -->
+        <div class="pop_up" id="pop_up">
+            <i onclick="fechar_solicitacao()" class="ri-close-circle-fill"></i>
+            <p id="valor">É necessário pagar 50% antes de começarmos o trabalho.</p>
             <br>
-            <br>
-            <br>
-            <p id="resultado"></p>
+            <a href="https://wa.me/244929129797?text=Olá%2C%20gostaria de solicitar %20um%20trabalho%20e%20entender%20melhor%20como%20as%20coisas%20vão%20funcionar." >Concordar e Solicitar</a>
+        </div>
+        <!-- POP-UP -->
+
+
+
+
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+        <div id="div_sobre"  data-aos="fade-left">
+            <h3>Sobre o Trabalho</h3>
+            <p class="sobre_p">Nossos trabalhos são organizados por profissionais com experiência técnica e prática na área da saúde, garantindo exclusividade para cada cliente.</p> <br>
+            <p class="sobre_p"> <strong>Economize até 60% em comparação com serviços tradicionais. <br>
+Digite o número de páginas e saiba o preço.</strong>
+             </p> 
+             <br class="quebra">
+
+            <div>
+                <div id="campo">
+                    <input type="number" oninput="calcular_preco()" placeholder="Digite aqui..." id="pag"> 
+                    <p>pag</p>
+                </div>
+                <p id="preco"></p>
+            </div>
         </div>
     </section>
 
+    <!-- NOTA -->
+    <section id="nota">
+        <div  data-aos="fade-right" >
+            <h3> <i class="ri-information-2-line"></i> NOTA</h3>
+            <p>Após o término do trabalho, ele será enviado pelo WhatsApp no formato .word ou .pdf pronto para impreensão. <br> <br>
+            Forneceremos-lhe o trabalho apenas no formato electrónico e não físico. </p>
+             <a  class="reta " href="#inicio" onclick="chamar()">Solicitar trabalho <i class="ri-whatsapp-line"></i></a>
+        </div>
+      
+    </section>
 
-
+    <!-- DADOS -->
+    <section id="dados" >
+        <div id="dados_div" >
+            <div class="info">
+             <p class="logo">MPINDI SOFT</p>
+             <p>Contacto: +244 929 12 97 97 <i></i> </p>
+             <p ><a style="color:white" href="https://mail.google.com/mail/?view=cm&fs=1&to=sebastiaompindi@gmail.com">sebastiaompindi@gmail.com </a></p>
+            </div>
+            <div class="info">
+             <a class="ri-home-4-fill" href="#inicio"></a>  <br> <br>
+             <a class="ri-whatsapp-line" href="https://wa.me/244929129797?text=." ></a> 
+            </div>
+         </div>
+    </section>
 
     <script src="script.js"></script>
-</body>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 
+    
+
+</body>
 </html>
